@@ -5,7 +5,7 @@ services:
     build: .
     ports:
       - "8000:8000"
-    command: chainlit run app.py -w
+    # command: chainlit run app.py -w
     depends_on:
       postgres:
         condition: service_healthy

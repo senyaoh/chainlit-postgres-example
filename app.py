@@ -2,9 +2,11 @@ import chainlit as cl
 from langchain import OpenAI, SQLDatabase, SQLDatabaseChain
 from prompt import POSTGRES_PROMPT
 import os
+import sqlalchemy
 
 llm = OpenAI(temperature=0.5)
-db = SQLDatabase.from_uri(os.getenv("POSTGRES_URI"))
+engine = sqlalchemy.create_engine(os.getenv("POSTGRES_URI"), pool_pre_ping=True)
+db = SQLDatabase(engine=engine)
 db_chain = SQLDatabaseChain.from_llm(
     llm=llm, 
     db=db, 
