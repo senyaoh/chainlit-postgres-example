@@ -6,7 +6,7 @@ The is an example chatbot built with Chainlit and LangChain to demostrate the ca
 - **LangChain:** [LangChain Documentation](https://python.langchain.com/en/latest/index.html) 📚
 - **Data Source:** [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-# Development
+## Development
 To run the application locally, simply run:
 ```
 docker compose up --build
