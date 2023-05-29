@@ -1,3 +1,5 @@
+# Adapted from https://github.com/hwchase17/langchain/blob/master/langchain/chains/sql_database/prompt.py
+
 from langchain.prompts.prompt import PromptTemplate
 
 PROMPT_SUFFIX = """Only use the following tables:
