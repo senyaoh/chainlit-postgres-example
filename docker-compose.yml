@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  chainlit:
+    build: .
+    ports:
+      - "8000:8000"
+    command: chainlit run app.py -w
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: gpt-3.5-turbo
+      POSTGRES_URI: postgresql+psycopg2://test_user:test_password@postgres:5432/olist_db
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: olist_db
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_password
+    volumes:
+      - ./data/olist_dump.sql:/docker-entrypoint-initdb.d/olist_dump.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 3

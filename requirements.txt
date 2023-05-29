@@ -1,0 +1,3 @@
+chainlit
+langchain
+psycopg2-binary
