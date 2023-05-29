@@ -1,6 +1,7 @@
 # Example Text-to-SQL Chatbot 🚀🤖
 
-The is an example chatbot built with Chainlit and LangChain to demostrate the capability of Text-to-SQL using OpenAI's LLM. The chatbot is connected to a postgres database with the Brazilian E-Commerce Public Dataset.
+The is an example chatbot built with Chainlit and LangChain to demostrate the capability of Text-to-SQL using OpenAI's LLM. The chatbot is connected to a postgres database with the Brazilian E-Commerce Public Dataset. You can try it here:
+[sql-chatbot.fly.dev](https://sql-chatbot.fly.dev/)
 
 - **Chainlit:** [Chainlit Documentation](https://docs.chainlit.io) 📚
 - **LangChain:** [LangChain Documentation](https://python.langchain.com/en/latest/index.html) 📚
