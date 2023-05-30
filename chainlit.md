@@ -9,4 +9,6 @@ The is an example chatbot built with Chainlit and LangChain to demostrate the ca
 
 # Example Questions to ask?
 - Which city has the most customers? How many?
-- Which customer has the highest amount of purchases?
+- Which product category has the most products?
+- Which customer has paid the most?
+- How did customer 00012a2ce6f8dcda20d059ce98491703 pay for the order?
